@@ -31,7 +31,7 @@ namespace MillerAssignment7
             return currentTemp.GetHighestTempValue().ToString();
         }
 
-        // lowest temperature value to string
+        // lowest temperature value to string 
         public string GetLowestTemp()
         {
             return currentTemp.GetLowestTempValue().ToString();
