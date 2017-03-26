@@ -21,7 +21,8 @@ namespace MillerAssignment7
         // loads the values of all 7 temperature text boxes that the user inputs 
         private void LoadTempsButton_Click(object sender, EventArgs e)
         {
-            tempBus.SetupTemps(TempValue1Text.Text, TempValue2Text.Text, TempValue3Text.Text, TempValue4Text.Text, TempValue5Text.Text, TempValue6Text.Text, TempValue7Text.Text);
+            tempBus.SetupTemps(TempValue1Text.Text, TempValue2Text.Text, TempValue3Text.Text, TempValue4Text.Text,
+                TempValue5Text.Text, TempValue6Text.Text, TempValue7Text.Text, CheckTempText.Text);
         }
 
         // takes the average/highest/lowest temperature values and assigns them to the correct labels to display to the user
@@ -40,9 +41,9 @@ namespace MillerAssignment7
             LowestTempLbl.Text = "";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CalculateDaysBelowButton_Click(object sender, EventArgs e)
         {
-
+            BelowValueLbl.Text = $"The number of days below this temperature is {tempBus.GetDaysBelow()}";
         }
     }
 }

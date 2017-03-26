@@ -48,8 +48,8 @@
             this.HighestTempLbl = new System.Windows.Forms.Label();
             this.LowestTempLbl = new System.Windows.Forms.Label();
             this.CheckTempText = new System.Windows.Forms.TextBox();
-            this.DaysBelowCalcButton = new System.Windows.Forms.Button();
             this.BelowValueLbl = new System.Windows.Forms.Label();
+            this.CalculateDaysBelowButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TempValue1Text
@@ -218,16 +218,6 @@
             this.CheckTempText.Size = new System.Drawing.Size(100, 20);
             this.CheckTempText.TabIndex = 24;
             // 
-            // DaysBelowCalcButton
-            // 
-            this.DaysBelowCalcButton.Location = new System.Drawing.Point(224, 235);
-            this.DaysBelowCalcButton.Name = "DaysBelowCalcButton";
-            this.DaysBelowCalcButton.Size = new System.Drawing.Size(82, 45);
-            this.DaysBelowCalcButton.TabIndex = 25;
-            this.DaysBelowCalcButton.Text = "Calculate Days Below";
-            this.DaysBelowCalcButton.UseVisualStyleBackColor = true;
-            this.DaysBelowCalcButton.Click += new System.EventHandler(this.button1_Click);
-            // 
             // BelowValueLbl
             // 
             this.BelowValueLbl.AutoSize = true;
@@ -237,13 +227,23 @@
             this.BelowValueLbl.TabIndex = 26;
             this.BelowValueLbl.Text = "xxx";
             // 
+            // CalculateDaysBelowButton
+            // 
+            this.CalculateDaysBelowButton.Location = new System.Drawing.Point(224, 247);
+            this.CalculateDaysBelowButton.Name = "CalculateDaysBelowButton";
+            this.CalculateDaysBelowButton.Size = new System.Drawing.Size(75, 44);
+            this.CalculateDaysBelowButton.TabIndex = 28;
+            this.CalculateDaysBelowButton.Text = "Calculate Days Below";
+            this.CalculateDaysBelowButton.UseVisualStyleBackColor = true;
+            this.CalculateDaysBelowButton.Click += new System.EventHandler(this.CalculateDaysBelowButton_Click);
+            // 
             // TempValueTally
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 357);
+            this.Controls.Add(this.CalculateDaysBelowButton);
             this.Controls.Add(this.BelowValueLbl);
-            this.Controls.Add(this.DaysBelowCalcButton);
             this.Controls.Add(this.CheckTempText);
             this.Controls.Add(this.LowestTempLbl);
             this.Controls.Add(this.HighestTempLbl);
@@ -294,8 +294,8 @@
         private System.Windows.Forms.Label HighestTempLbl;
         private System.Windows.Forms.Label LowestTempLbl;
         private System.Windows.Forms.TextBox CheckTempText;
-        private System.Windows.Forms.Button DaysBelowCalcButton;
         private System.Windows.Forms.Label BelowValueLbl;
+        private System.Windows.Forms.Button CalculateDaysBelowButton;
     }
 }
 
