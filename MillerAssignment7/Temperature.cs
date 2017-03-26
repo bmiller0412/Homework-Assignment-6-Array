@@ -37,6 +37,7 @@ namespace MillerAssignment7
             return totaler / TempValues.Length;
         }
 
+
         // gets the lowest temperature value
         public int GetLowestTempValue()
         {
@@ -48,5 +49,16 @@ namespace MillerAssignment7
         {
             return tempValues[6];
         }
+
+        // method to find how many days the temperature was below the given value
+        public int DaysBelow( int testTemp)
+        {
+            int daysBelow = 0;
+            foreach (int temp in TempValues)
+            {
+                if (temp < testTemp) daysBelow++;
+            }
+            return daysBelow;
+        }
     }
-}
+} 

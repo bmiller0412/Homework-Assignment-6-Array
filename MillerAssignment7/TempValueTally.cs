@@ -39,5 +39,10 @@ namespace MillerAssignment7
             HighestTempLbl.Text = "";
             LowestTempLbl.Text = "";
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

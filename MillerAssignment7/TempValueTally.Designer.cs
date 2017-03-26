@@ -45,10 +45,11 @@
             this.Temp6Lbl = new System.Windows.Forms.Label();
             this.Temp7Lbl = new System.Windows.Forms.Label();
             this.LoadTempsButton = new System.Windows.Forms.Button();
-            this.HighestTempCalcButton = new System.Windows.Forms.Button();
-            this.LowestTempCalcButton = new System.Windows.Forms.Button();
             this.HighestTempLbl = new System.Windows.Forms.Label();
             this.LowestTempLbl = new System.Windows.Forms.Label();
+            this.CheckTempText = new System.Windows.Forms.TextBox();
+            this.DaysBelowCalcButton = new System.Windows.Forms.Button();
+            this.BelowValueLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TempValue1Text
@@ -103,7 +104,7 @@
             // AverageAnswerLbl
             // 
             this.AverageAnswerLbl.AutoSize = true;
-            this.AverageAnswerLbl.Location = new System.Drawing.Point(197, 133);
+            this.AverageAnswerLbl.Location = new System.Drawing.Point(197, 35);
             this.AverageAnswerLbl.Name = "AverageAnswerLbl";
             this.AverageAnswerLbl.Size = new System.Drawing.Size(22, 13);
             this.AverageAnswerLbl.TabIndex = 8;
@@ -111,7 +112,7 @@
             // 
             // CalculateTemperatureButton
             // 
-            this.CalculateTemperatureButton.Location = new System.Drawing.Point(15, 310);
+            this.CalculateTemperatureButton.Location = new System.Drawing.Point(224, 145);
             this.CalculateTemperatureButton.Name = "CalculateTemperatureButton";
             this.CalculateTemperatureButton.Size = new System.Drawing.Size(82, 35);
             this.CalculateTemperatureButton.TabIndex = 9;
@@ -192,30 +193,10 @@
             this.LoadTempsButton.UseVisualStyleBackColor = true;
             this.LoadTempsButton.Click += new System.EventHandler(this.LoadTempsButton_Click);
             // 
-            // HighestTempCalcButton
-            // 
-            this.HighestTempCalcButton.Location = new System.Drawing.Point(103, 310);
-            this.HighestTempCalcButton.Name = "HighestTempCalcButton";
-            this.HighestTempCalcButton.Size = new System.Drawing.Size(81, 35);
-            this.HighestTempCalcButton.TabIndex = 18;
-            this.HighestTempCalcButton.Text = "Get Highest Temp";
-            this.HighestTempCalcButton.UseVisualStyleBackColor = true;
-            this.HighestTempCalcButton.Click += new System.EventHandler(this.HighestTempCalcButton_Click);
-            // 
-            // LowestTempCalcButton
-            // 
-            this.LowestTempCalcButton.Location = new System.Drawing.Point(190, 310);
-            this.LowestTempCalcButton.Name = "LowestTempCalcButton";
-            this.LowestTempCalcButton.Size = new System.Drawing.Size(82, 35);
-            this.LowestTempCalcButton.TabIndex = 19;
-            this.LowestTempCalcButton.Text = "Get Lowest Temp";
-            this.LowestTempCalcButton.UseVisualStyleBackColor = true;
-            this.LowestTempCalcButton.Click += new System.EventHandler(this.LowestTempCalcButton_Click);
-            // 
             // HighestTempLbl
             // 
             this.HighestTempLbl.AutoSize = true;
-            this.HighestTempLbl.Location = new System.Drawing.Point(197, 167);
+            this.HighestTempLbl.Location = new System.Drawing.Point(197, 69);
             this.HighestTempLbl.Name = "HighestTempLbl";
             this.HighestTempLbl.Size = new System.Drawing.Size(22, 13);
             this.HighestTempLbl.TabIndex = 20;
@@ -224,21 +205,48 @@
             // LowestTempLbl
             // 
             this.LowestTempLbl.AutoSize = true;
-            this.LowestTempLbl.Location = new System.Drawing.Point(197, 205);
+            this.LowestTempLbl.Location = new System.Drawing.Point(197, 103);
             this.LowestTempLbl.Name = "LowestTempLbl";
             this.LowestTempLbl.Size = new System.Drawing.Size(22, 13);
             this.LowestTempLbl.TabIndex = 21;
             this.LowestTempLbl.Text = "xxx";
+            // 
+            // CheckTempText
+            // 
+            this.CheckTempText.Location = new System.Drawing.Point(215, 201);
+            this.CheckTempText.Name = "CheckTempText";
+            this.CheckTempText.Size = new System.Drawing.Size(100, 20);
+            this.CheckTempText.TabIndex = 24;
+            // 
+            // DaysBelowCalcButton
+            // 
+            this.DaysBelowCalcButton.Location = new System.Drawing.Point(224, 235);
+            this.DaysBelowCalcButton.Name = "DaysBelowCalcButton";
+            this.DaysBelowCalcButton.Size = new System.Drawing.Size(82, 45);
+            this.DaysBelowCalcButton.TabIndex = 25;
+            this.DaysBelowCalcButton.Text = "Calculate Days Below";
+            this.DaysBelowCalcButton.UseVisualStyleBackColor = true;
+            this.DaysBelowCalcButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BelowValueLbl
+            // 
+            this.BelowValueLbl.AutoSize = true;
+            this.BelowValueLbl.Location = new System.Drawing.Point(197, 305);
+            this.BelowValueLbl.Name = "BelowValueLbl";
+            this.BelowValueLbl.Size = new System.Drawing.Size(22, 13);
+            this.BelowValueLbl.TabIndex = 26;
+            this.BelowValueLbl.Text = "xxx";
             // 
             // TempValueTally
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(383, 357);
+            this.Controls.Add(this.BelowValueLbl);
+            this.Controls.Add(this.DaysBelowCalcButton);
+            this.Controls.Add(this.CheckTempText);
             this.Controls.Add(this.LowestTempLbl);
             this.Controls.Add(this.HighestTempLbl);
-            this.Controls.Add(this.LowestTempCalcButton);
-            this.Controls.Add(this.HighestTempCalcButton);
             this.Controls.Add(this.LoadTempsButton);
             this.Controls.Add(this.Temp7Lbl);
             this.Controls.Add(this.Temp6Lbl);
@@ -283,10 +291,11 @@
         private System.Windows.Forms.Label Temp6Lbl;
         private System.Windows.Forms.Label Temp7Lbl;
         private System.Windows.Forms.Button LoadTempsButton;
-        private System.Windows.Forms.Button HighestTempCalcButton;
-        private System.Windows.Forms.Button LowestTempCalcButton;
         private System.Windows.Forms.Label HighestTempLbl;
         private System.Windows.Forms.Label LowestTempLbl;
+        private System.Windows.Forms.TextBox CheckTempText;
+        private System.Windows.Forms.Button DaysBelowCalcButton;
+        private System.Windows.Forms.Label BelowValueLbl;
     }
 }
 
